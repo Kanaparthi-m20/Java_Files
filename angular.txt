@@ -1,0 +1,14 @@
+change detection strategey
+view encapsulation
+rsjs-take until,take while,off
+difference between find & filter
+interceptor
+pure vs impure pipe
+host listener & host binding:we can capture the user events
+subject and behavioural
+jIT
+AOT
+content child and content chidren
+getters nd setters
+iewChild allows a parent component to get a reference to a child component and access its properties and methods.
+ViewChildren allows a parent component to get a reference to multiple child components.

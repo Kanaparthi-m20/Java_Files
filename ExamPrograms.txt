@@ -1,0 +1,51 @@
+import java.util.*;
+class Program2
+{
+public static void main(String args[])
+{
+	String s1=new String("silent");
+	String s2=new String("listen");
+	String str[]=s1.split("");
+	String str1[]=s2.split("");
+	Arrays.sort(str);
+	Arrays.sort(str1);
+
+	if(s1.length()==s2.length())
+	{
+		if(str.equals(str1))
+		{
+			System.out.println("ANAGRAM");
+		}
+		else
+		{
+			System.out.println("NOT");
+		}
+	}
+	else
+		System.out.println("NOT");
+
+	
+}
+}
+------------------------------------------------------------------------------------
+class Main
+{
+public static void main(String args[])
+{
+	String s1=new String("madam arora teaches malayalam");
+	char s[]=s1.toCharArray();
+	String a[]=s1.split(" ");
+	String str="";
+	for(int x=a.length;x>0;x--)
+	{
+		str="";
+		str=str+s1.charAt(x);
+		if(str.equals(a[x]))
+			System.out.println(str);
+	}
+	
+		
+	
+		
+}
+}

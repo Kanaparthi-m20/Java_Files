@@ -1,0 +1,90 @@
+show databases:predefined databses/our created databses
+create database databsename;
+use databasename;-database changed
+create table tablename;
+show tables;
+describe tablename;
+ALTER ADD TABLE:
+-----------
+we can add columns in the existing table
+alter table tablename add column cust_id int;-add one coloumn (default it will add last)
+alter table DMartshop add (p1 int,p2 int);-add two are more coloumns
+alter table tablename add column cust_id int first;-add one coloumn first
+we are using after,before whenever we want to add coloumn
+alter table tablename add column cp5 int after p2 int;ituseus is adding after p2 column
+ALTER MODIFY Table:
+-----------------
+we can change datatype in table
+alter table tablename modify p2(cn) double;
+---------------------------------------------------------------------------------
+ALTER DROP:
+it used to delete the column
+alter table tablename drop item;
+rename table tablename to newname;:it used to rename the tablealter table DMartshop drop cust_name(cn),drop p2(columnname);:we can't delete using braces 
+alter table tablename rename column (cn-columnname) to new name;:used to rename column
+------------------------------------------------------------------------------
+instance,tuple-row
+fiels,attribute-column
+---------------------------------------------------------------------------
+Insert:Insert the values into table
+insert into tablename values(1,'Anu','M','1');-Insertion order is preserved
+insert into tablename value(1,'Anu','M','1'),(2,'mouni','F','1')-we can store multiple values in a table separated by commas
+----------------------------------------------------------------------------
+ select *from tablename;-we can see the table & values
+select columnname from tablename-it will give that particular column values
+select columnname,cn from student;-return mutiple columns 
+select cn as studentname(anyname) from student;-return anyname as column name that particular time.
+insert into tablename(p1,p2) values(10,20);
+select *from tablename
+lter table tablename modify p2(cn) double ;
+-------------------------------------------------------------------------------
+primary key does not allow null values it allows only unquie values.
+foreign key establish the relation between two tables.
+column name is not same but datatype is same.
+unique key contains null value.
+-----------------------------------------------------
+ create index indexname on tablename(salary(OR)columnname);
+describe select *from tablenamename where salary=45000;
+show index from tablename;
+alter table tablename add primary key(id);
+alter table tablename drop primarykey;
+describe select *from tablename where id=5;
+drop index indexname on tablename;
+Clustered index:
+A table can have only one clustered index primary key constraint creates a clustered index automatically
+NONclustered index:Secondary index is same as index of the textbook where the data is stored in one place and index stored in another place.
+
+the index will have pointers to store locations of the data .In secondary inddex data is stoed in ascending order and we can have more than one 
+ create index indexname on tablename(salary desc);
+primary key:we will give any order in id's but it takes only ascending order
+select upper(colname) from tablename;
+select lower(columnname) from tablename;
+select length(columnname) from tablename;
+select *from tablename where length(columnname)=4:it will return only 4length values
+select trim('              mouni       '):remove spaces
+select instr('oracle','e'):return index
+select substring('oracle',2,6):gives racle
+select substring('oracle',2,6) as substring:change columnname
+select concat(columnname,colname) from tablename:it is adding two strings
+select abs(-30):it will takes positive value
+select sqrt(25);
+select power(2,4);
+select mod(10,2);
+select truncate(76.8997654,4) ;
+select greatest(10,30,499,500,700,34);
+select least(10,34,76,2,4,1);
+select now();current date and time
+select curdate() or select current_date;
+select current_time:
+select month('2023-08-30');select year('2023-08-30') or day
+select max(columnname) from tablename;
+select count(*) from tn:return how many rows is present in table
+select monthname('2023-08-14') or dayname
+select colna,colnam from tn where salary>2000;
+select *from tn where colnam=1 && colna='mouni';
+select *from tn where colnam=1 || colnam='mouni';
+select *from tn where not(colnam=1 || colnam='mouni')
+select *from tn where in('values''vlues')
+selct *from tn where colname like 'a&', or %c
+select *from tn where price(colnameen 10 nd 20
+
